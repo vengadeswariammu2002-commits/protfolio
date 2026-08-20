@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S. Vengadeswari — Digital Marketing Professional</title>
+<meta name="description" content="Portfolio of S. Vengadeswari, Digital Marketing professional specializing in SEO, social media, and campaign strategy.">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#0a0a0d;
+  --surface:#121218;
+  --surface-2:#191921;
+  --border:rgba(255,255,255,0.08);
+  --text:#f2f2ef;
+  --muted:#98979f;
+  --gold:#ffb238;
+  --gold-dim:#8a611f;
+  --teal:#21e6c1;
+  --teal-dim:rgba(33,230,193,0.12);
+  --font-display:'Space Grotesk', sans-serif;
+  --font-body:'Inter', sans-serif;
+  --font-mono:'JetBrains Mono', monospace;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-weight:400;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+h1,h2,h3,h4,.display-font{
+  font-family:var(--font-display);
+  letter-spacing:-0.02em;
+}
+
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:0.72rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--teal);
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+  margin-bottom:1rem;
+}
+.eyebrow::before{
+  content:"";
+  width:22px;
+  height:1px;
+  background:var(--teal);
+  display:inline-block;
+}
+
+.text-muted-custom{color:var(--muted) !important;}
+.text-gold{color:var(--gold) !important;}
+.text-teal{color:var(--teal) !important;}
+
+section{
+  position:relative;
+  padding:7rem 0;
+  border-bottom:1px solid var(--border);
+}
+@media (max-width:767px){
+  section{padding:4.5rem 0;}
+}
+
+/* ============ BG NOISE / GRID EFFECT ============ */
+.bg-grid{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 90%);
+}
+
+/* ============ NAVBAR ============ */
+.navbar{
+  background:rgba(10,10,13,0.72);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  padding:0.9rem 0;
+  transition:padding .3s ease, background .3s ease;
+}
+.navbar.scrolled{padding:0.5rem 0;}
+.navbar-brand{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.25rem;
+  color:var(--text) !important;
+  letter-spacing:-0.01em;
+}
+.navbar-brand span{color:var(--gold);}
+.nav-link{
+  color:var(--muted) !important;
+  font-size:0.92rem;
+  font-weight:500;
+  padding:0.5rem 1.1rem !important;
+  position:relative;
+  transition:color .25s ease;
+}
+.nav-link::after{
+  content:"";
+  position:absolute;
+  left:1.1rem; right:1.1rem; bottom:0.25rem;
+  height:1px;
+  background:var(--teal);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .3s ease;
+}
+.nav-link:hover, .nav-link.active{color:var(--text) !important;}
+.nav-link:hover::after, .nav-link.active::after{transform:scaleX(1);}
+.navbar-toggler{border:1px solid var(--border); padding:0.4rem 0.6rem;}
+.navbar-toggler:focus{box-shadow:0 0 0 0.2rem rgba(33,230,193,0.25);}
+
+.btn-nav-cta{
+  background:transparent;
+  border:1px solid var(--gold);
+  color:var(--gold) !important;
+  border-radius:30px;
+  padding:0.45rem 1.25rem !important;
+  font-size:0.85rem;
+  font-weight:600;
+  margin-left:0.5rem;
+}
+.btn-nav-cta:hover{background:var(--gold); color:#0a0a0d !important;}
+.btn-nav-cta::after{display:none;}
+
+/* ============ BUTTONS ============ */
+.btn-solid{
+  background:var(--gold);
+  color:#0a0a0d;
+  border:1px solid var(--gold);
+  border-radius:30px;
+  padding:0.85rem 2rem;
+  font-weight:600;
+  font-size:0.95rem;
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.btn-solid:hover{
+  background:#ffc35c;
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px -8px rgba(255,178,56,0.45);
+  color:#0a0a0d;
+}
+.btn-outline-custom{
+  background:transparent;
+  color:var(--text);
+  border:1px solid var(--border);
+  border-radius:30px;
+  padding:0.85rem 2rem;
+  font-weight:600;
+  font-size:0.95rem;
+  transition:all .25s ease;
+}
+.btn-outline-custom:hover{
+  border-color:var(--teal);
+  color:var(--teal);
+  transform:translateY(-3px);
+}
+
+/* ============ HERO ============ */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:7rem;
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+.hero-kicker{
+  font-family:var(--font-mono);
+  font-size:0.78rem;
+  letter-spacing:0.2em;
+  color:var(--muted);
+  text-transform:uppercase;
+}
+.hero h1{
+  font-size:clamp(2.4rem, 6vw, 4.4rem);
+  font-weight:700;
+  line-height:1.05;
+  margin:0.8rem 0 1.2rem;
+}
+.hero h1 .accent{color:var(--gold);}
+.hero-tagline{
+  font-size:1.15rem;
+  color:var(--muted);
+  max-width:540px;
+  margin-bottom:2.2rem;
+}
+.hero-tagline strong{color:var(--text); font-weight:600;}
+
+.funnel-stages{
+  display:flex;
+  gap:0;
+  margin-top:3rem;
+  font-family:var(--font-mono);
+  font-size:0.72rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  flex-wrap:wrap;
+}
+.funnel-stages span{
+  color:var(--muted);
+  padding:0.4rem 1rem 0.4rem 0;
+  position:relative;
+}
+.funnel-stages span:not(:last-child)::after{
+  content:"→";
+  margin-left:1rem;
+  color:var(--teal);
+}
+.funnel-stages span.active-stage{color:var(--teal);}
+
+/* Signature: live metric ticker graphic */
+.metric-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:1.75rem;
+  position:relative;
+  overflow:hidden;
+}
+.metric-card::before{
+  content:"";
+  position:absolute;
+  top:-40%; right:-30%;
+  width:220px; height:220px;
+  background:radial-gradient(circle, rgba(33,230,193,0.16), transparent 70%);
+  pointer-events:none;
+}
+.metric-card .metric-top{
+  display:flex; justify-content:space-between; align-items:center;
+  font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.1em;
+  color:var(--muted); text-transform:uppercase; margin-bottom:1rem;
+}
+.pulse-dot{
+  width:8px; height:8px; border-radius:50%;
+  background:var(--teal);
+  box-shadow:0 0 0 0 rgba(33,230,193,0.6);
+  animation:pulse 2s infinite;
+  display:inline-block;
+  margin-right:6px;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(33,230,193,0.5);}
+  70%{box-shadow:0 0 0 10px rgba(33,230,193,0);}
+  100%{box-shadow:0 0 0 0 rgba(33,230,193,0);}
+}
+.metric-svg-wrap{width:100%; height:110px;}
+.metric-stats{
+  display:flex; justify-content:space-between;
+  margin-top:1.25rem; padding-top:1.25rem;
+  border-top:1px solid var(--border);
+}
+.metric-stats .stat-num{
+  font-family:var(--font-mono);
+  font-size:1.15rem; font-weight:500; color:var(--text);
+}
+.metric-stats .stat-label{
+  font-size:0.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em;
+}
+.moving-dot{
+  animation:travel 3.2s ease-in-out infinite;
+}
+@keyframes travel{
+  0%{ offset-distance:0%; }
+  100%{ offset-distance:100%; }
+}
+
+/* profile ring */
+.profile-wrap{position:relative; width:100%; max-width:340px; margin:0 auto;}
+.profile-ring{
+  aspect-ratio:1/1;
+  border-radius:28px;
+  border:1px solid var(--border);
+  background:linear-gradient(160deg, var(--surface), var(--surface-2));
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+.profile-initials{
+  font-family:var(--font-display);
+  font-size:5.5rem;
+  font-weight:700;
+  color:var(--text);
+  opacity:0.92;
+  z-index:2;
+}
+.profile-ring::after{
+  content:"";
+  position:absolute;
+  width:160%; height:160%;
+  background:conic-gradient(from 0deg, transparent, rgba(255,178,56,0.18), transparent 30%);
+  animation:rotate 8s linear infinite;
+}
+@keyframes rotate{to{transform:rotate(360deg);}}
+.badge-floating{
+  position:absolute;
+  bottom:-18px; right:-14px;
+  background:var(--gold);
+  color:#0a0a0d;
+  font-family:var(--font-mono);
+  font-size:0.72rem;
+  font-weight:600;
+  padding:0.55rem 1rem;
+  border-radius:40px;
+  box-shadow:0 12px 24px -8px rgba(255,178,56,0.5);
+  z-index:3;
+}
+
+.scroll-cue{
+  position:absolute;
+  bottom:2rem; left:50%; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:0.5rem;
+  color:var(--muted);
+  font-family:var(--font-mono); font-size:0.68rem;
+  letter-spacing:0.15em; text-transform:uppercase;
+}
+.scroll-cue .line{width:1px; height:34px; background:linear-gradient(var(--teal), transparent); animation:scrollline 1.8s ease-in-out infinite;}
+@keyframes scrollline{0%{opacity:0.2;} 50%{opacity:1;} 100%{opacity:0.2;}}
+
+/* ============ SECTION HEADS ============ */
+.section-head{margin-bottom:3.5rem;}
+.section-head h2{font-size:clamp(1.8rem,4vw,2.6rem); font-weight:700;}
+.section-head p{color:var(--muted); max-width:560px;}
+
+/* ============ ABOUT ============ */
+.about-stat{
+  text-align:center;
+  padding:1.5rem 1rem;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--surface);
+  height:100%;
+}
+.about-stat .count{
+  font-family:var(--font-mono);
+  font-size:2.2rem;
+  font-weight:600;
+  color:var(--gold);
+  line-height:1;
+}
+.about-stat .label{
+  font-size:0.78rem;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  margin-top:0.6rem;
+}
+.about-quote{
+  border-left:2px solid var(--teal);
+  padding-left:1.5rem;
+  color:var(--muted);
+  font-size:1.05rem;
+  margin-top:2rem;
+}
+
+/* ============ SKILLS ============ */
+.skill-item{margin-bottom:1.6rem;}
+.skill-item .skill-top{
+  display:flex; justify-content:space-between;
+  font-size:0.92rem; margin-bottom:0.5rem;
+}
+.skill-item .skill-top .pct{font-family:var(--font-mono); color:var(--teal); font-size:0.85rem;}
+.skill-bar{
+  height:6px; border-radius:6px; background:var(--surface-2);
+  overflow:hidden; border:1px solid var(--border);
+}
+.skill-bar-fill{
+  height:100%; border-radius:6px;
+  background:linear-gradient(90deg, var(--teal), var(--gold));
+  width:0%;
+  transition:width 1.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.tool-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  border:1px solid var(--border);
+  background:var(--surface);
+  padding:0.55rem 1.1rem;
+  border-radius:30px;
+  font-size:0.85rem;
+  margin:0.3rem;
+  color:var(--muted);
+  transition:all .25s ease;
+}
+.tool-chip:hover{border-color:var(--teal); color:var(--text); transform:translateY(-2px);}
+.tool-chip i{color:var(--gold);}
+
+/* ============ SERVICES ============ */
+.service-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:2.2rem;
+  height:100%;
+  transition:transform .3s ease, border-color .3s ease, background .3s ease;
+  position:relative;
+}
+.service-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(33,230,193,0.4);
+  background:var(--surface-2);
+}
+.service-icon{
+  width:52px; height:52px;
+  border-radius:12px;
+  background:var(--teal-dim);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--teal);
+  font-size:1.3rem;
+  margin-bottom:1.4rem;
+}
+.service-card h4{font-size:1.15rem; margin-bottom:0.7rem;}
+.service-card p{color:var(--muted); font-size:0.92rem; margin-bottom:0;}
+.service-num{
+  position:absolute; top:1.8rem; right:2rem;
+  font-family:var(--font-mono); font-size:0.75rem; color:var(--border);
+}
+
+/* ============ PROJECTS ============ */
+.project-card{
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  background:var(--surface);
+  height:100%;
+  transition:transform .35s ease, box-shadow .35s ease;
+  position:relative;
+}
+.project-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 24px 48px -20px rgba(0,0,0,0.6);
+}
+.project-media{
+  height:190px;
+  background:linear-gradient(135deg, var(--surface-2), #0d0d12);
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+  border-bottom:1px solid var(--border);
+  overflow:hidden;
+}
+.project-media i{font-size:2.4rem; color:var(--border); transition:color .3s ease, transform .3s ease;}
+.project-card:hover .project-media i{color:var(--gold); transform:scale(1.15);}
+.project-tag{
+  position:absolute; top:0.9rem; left:0.9rem;
+  font-family:var(--font-mono); font-size:0.65rem;
+  letter-spacing:0.08em; text-transform:uppercase;
+  background:rgba(10,10,13,0.7);
+  border:1px solid var(--border);
+  color:var(--teal);
+  padding:0.3rem 0.7rem;
+  border-radius:20px;
+}
+.project-body{padding:1.6rem;}
+.project-body h4{font-size:1.1rem; margin-bottom:0.5rem;}
+.project-body p{color:var(--muted); font-size:0.88rem; margin-bottom:1rem;}
+.project-metrics{
+  display:flex; gap:1.2rem;
+  padding-top:1rem; border-top:1px solid var(--border);
+}
+.project-metrics div{font-family:var(--font-mono); font-size:0.78rem; color:var(--muted);}
+.project-metrics strong{display:block; color:var(--gold); font-size:1rem;}
+
+/* ============ CONTACT ============ */
+.contact-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:2.5rem;
+}
+.form-control-custom{
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  color:var(--text);
+  border-radius:10px;
+  padding:0.85rem 1rem;
+  font-size:0.92rem;
+}
+.form-control-custom:focus{
+  background:var(--surface-2);
+  border-color:var(--teal);
+  box-shadow:0 0 0 0.2rem rgba(33,230,193,0.15);
+  color:var(--text);
+}
+.form-control-custom::placeholder{color:var(--muted);}
+.contact-info-item{
+  display:flex; align-items:flex-start; gap:1rem;
+  margin-bottom:1.6rem;
+}
+.contact-info-item .icon-box{
+  width:44px; height:44px; border-radius:10px;
+  background:var(--teal-dim); color:var(--teal);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.contact-info-item h6{margin-bottom:0.2rem; font-size:0.95rem;}
+.contact-info-item p{color:var(--muted); margin-bottom:0; font-size:0.88rem;}
+.social-row a{
+  width:42px; height:42px; border-radius:50%;
+  border:1px solid var(--border);
+  display:inline-flex; align-items:center; justify-content:center;
+  color:var(--muted); margin-right:0.6rem;
+  transition:all .25s ease;
+}
+.social-row a:hover{border-color:var(--gold); color:var(--gold); transform:translateY(-3px);}
+
+footer{
+  padding:2rem 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:0.85rem;
+}
+footer span{color:var(--gold);}
+
+/* ============ ANIMATIONS ============ */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .7s ease, transform .7s cubic-bezier(.25,.8,.25,1);
+}
+.reveal.in-view{opacity:1; transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.2s;}
+.reveal-delay-3{transition-delay:0.3s;}
+.reveal-delay-4{transition-delay:0.4s;}
+
+::selection{background:var(--gold); color:#0a0a0d;}
+
+/* scrollbar */
+::-webkit-scrollbar{width:9px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--surface-2); border-radius:10px;}
+::-webkit-scrollbar-thumb:hover{background:var(--teal-dim);}
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#home">Vengadeswari<span>.</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="fa-solid fa-bars text-light"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link btn-nav-cta" href="#contact">Hire Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7">
+        <div class="hero-kicker reveal">Digital Marketing · Fresher</div>
+        <h1 class="reveal reveal-delay-1">Hi, I'm S. <span class="accent">Vengadeswari</span> —<br>turning attention into action.</h1>
+        <p class="hero-tagline reveal reveal-delay-2">
+          A results-driven <strong>Digital Marketing</strong> graduate who plans campaigns, reads the analytics, and writes the copy that gets the click. Ready to bring strategy and curiosity to your brand's next launch.
+        </p>
+        <div class="d-flex flex-wrap gap-3 reveal reveal-delay-3">
+          <a href="#projects" class="btn-solid">View My Work</a>
+          <a href="#contact" class="btn-outline-custom">Get In Touch</a>
+        </div>
+        <div class="funnel-stages reveal reveal-delay-4">
+          <span class="active-stage">Awareness</span>
+          <span>Interest</span>
+          <span>Consideration</span>
+          <span>Conversion</span>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="reveal reveal-delay-2">
+          <div class="profile-wrap mb-4">
+            <div class="profile-ring">
+              <div class="profile-initials">SV</div>
+            </div>
+            <div class="badge-floating"><i class="fa-solid fa-graduation-cap me-1"></i> Fresher · Open to Work</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-top">
+              <span><span class="pulse-dot"></span>Campaign Reach — Live</span>
+              <span>Q3</span>
+            </div>
+            <div class="metric-svg-wrap">
+              <svg viewBox="0 0 300 100" width="100%" height="100%" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#21e6c1" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#21e6c1" stop-opacity="0"/>
+                  </linearGradient>
+                  <path id="linePath" d="M0,80 C40,75 50,50 80,48 C120,45 130,60 160,55 C200,48 210,20 240,18 C260,16 280,10 300,5" />
+                </defs>
+                <path d="M0,80 C40,75 50,50 80,48 C120,45 130,60 160,55 C200,48 210,20 240,18 C260,16 280,10 300,5 L300,100 L0,100 Z" fill="url(#areaFill)"/>
+                <use href="#linePath" fill="none" stroke="#21e6c1" stroke-width="2"/>
+                <circle r="4" fill="#ffb238">
+                  <animateMotion dur="3.5s" repeatCount="indefinite" rotate="auto">
+                    <mpath href="#linePath"/>
+                  </animateMotion>
+                </circle>
+              </svg>
+            </div>
+            <div class="metric-stats">
+              <div><span class="stat-num" data-count="128">0</span><div class="stat-label">Leads</div></div>
+              <div><span class="stat-num" data-count="94">0</span>%<div class="stat-label">Engagement</div></div>
+              <div><span class="stat-num" data-count="12">0</span><div class="stat-label">Campaigns</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue d-none d-lg-flex">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <div class="row gy-5 align-items-center">
+      <div class="col-lg-6 reveal">
+        <div class="eyebrow">About Me</div>
+        <h2>Curious about consumer behavior, obsessed with the numbers behind it.</h2>
+        <p class="text-muted-custom mt-3">
+          I'm a Digital Marketing graduate based in India, trained in SEO, paid media, social strategy, and content creation. During my internships and academic projects, I've planned mock campaigns, audited websites for search performance, and built content calendars that speak directly to a brand's audience.
+        </p>
+        <p class="text-muted-custom">
+          I believe good marketing sits at the intersection of creativity and data — a compelling headline is only half the job; knowing why it converted is the other half.
+        </p>
+        <div class="about-quote">
+          "I want to help brands say the right thing, to the right person, at the right moment — and prove it with the numbers."
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-6 reveal reveal-delay-1">
+            <div class="about-stat">
+              <div class="count" data-count="6">0</div>
+              <div class="label">Certifications</div>
+            </div>
+          </div>
+          <div class="col-6 reveal reveal-delay-2">
+            <div class="about-stat">
+              <div class="count" data-count="8">0</div>
+              <div class="label">Academic Projects</div>
+            </div>
+          </div>
+          <div class="col-6 reveal reveal-delay-3">
+            <div class="about-stat">
+              <div class="count" data-count="3">0</div>
+              <div class="label">Internships</div>
+            </div>
+          </div>
+          <div class="col-6 reveal reveal-delay-4">
+            <div class="about-stat">
+              <div class="count" data-count="10">0</div>
+              <div class="label">Marketing Tools</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Skills</div>
+      <h2>What I bring to a marketing team</h2>
+      <p>Core competencies developed through coursework, certifications, and hands-on project work.</p>
+    </div>
+    <div class="row gy-5">
+      <div class="col-lg-6 reveal">
+        <div class="skill-item">
+          <div class="skill-top"><span>Search Engine Optimization (SEO)</span><span class="pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>Social Media Marketing</span><span class="pct">92%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>Content Strategy & Copywriting</span><span class="pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>Google Ads & SEM</span><span class="pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>Analytics & Reporting</span><span class="pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>Email Marketing Automation</span><span class="pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal reveal-delay-2">
+        <h5 class="mb-3 fw-semibold">Tools & Platforms</h5>
+        <div>
+          <span class="tool-chip"><i class="fa-brands fa-google"></i>Google Analytics</span>
+          <span class="tool-chip"><i class="fa-brands fa-google"></i>Google Ads</span>
+          <span class="tool-chip"><i class="fa-solid fa-magnifying-glass"></i>SEMrush</span>
+          <span class="tool-chip"><i class="fa-solid fa-chart-line"></i>Google Search Console</span>
+          <span class="tool-chip"><i class="fa-brands fa-meta"></i>Meta Business Suite</span>
+          <span class="tool-chip"><i class="fa-solid fa-palette"></i>Canva</span>
+          <span class="tool-chip"><i class="fa-brands fa-hubspot"></i>HubSpot</span>
+          <span class="tool-chip"><i class="fa-solid fa-envelope"></i>Mailchimp</span>
+          <span class="tool-chip"><i class="fa-brands fa-wordpress"></i>WordPress</span>
+          <span class="tool-chip"><i class="fa-solid fa-table"></i>MS Excel</span>
+        </div>
+
+        <h5 class="mt-5 mb-3 fw-semibold">Certifications</h5>
+        <ul class="list-unstyled text-muted-custom">
+          <li class="mb-2"><i class="fa-solid fa-circle-check text-teal me-2"></i>Google Digital Marketing & E-commerce Certificate</li>
+          <li class="mb-2"><i class="fa-solid fa-circle-check text-teal me-2"></i>HubSpot Content Marketing Certification</li>
+          <li class="mb-2"><i class="fa-solid fa-circle-check text-teal me-2"></i>Meta Social Media Marketing Certificate</li>
+          <li class="mb-2"><i class="fa-solid fa-circle-check text-teal me-2"></i>SEMrush SEO Fundamentals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Services</div>
+      <h2>How I can help your brand grow</h2>
+      <p>End-to-end support across the funnel — from first impression to loyal customer.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="service-card">
+          <span class="service-num">01</span>
+          <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h4>SEO Optimization</h4>
+          <p>On-page and technical SEO audits, keyword research, and content optimization to improve organic visibility.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="service-card">
+          <span class="service-num">02</span>
+          <div class="service-icon"><i class="fa-solid fa-hashtag"></i></div>
+          <h4>Social Media Management</h4>
+          <p>Content calendars, caption writing, and platform strategy across Instagram, LinkedIn, and Meta.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+        <div class="service-card">
+          <span class="service-num">03</span>
+          <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h4>Paid Ad Campaigns</h4>
+          <p>Google Ads and Meta Ads campaign setup, audience targeting, and budget-conscious optimization.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="service-card">
+          <span class="service-num">04</span>
+          <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <h4>Content Strategy</h4>
+          <p>Brand voice development, blog content planning, and copy that moves people from scroll to click.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="service-card">
+          <span class="service-num">05</span>
+          <div class="service-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <h4>Email Marketing</h4>
+          <p>Newsletter design, drip sequences, and list segmentation to keep audiences engaged.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+        <div class="service-card">
+          <span class="service-num">06</span>
+          <div class="service-icon"><i class="fa-solid fa-chart-simple"></i></div>
+          <h4>Analytics & Reporting</h4>
+          <p>Dashboard setup and monthly performance reports that translate data into next steps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Projects</div>
+      <h2>Recent work & case studies</h2>
+      <p>A selection of academic, internship, and self-initiated marketing projects.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="project-card">
+          <div class="project-media">
+            <span class="project-tag">SEO</span>
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <div class="project-body">
+            <h4>Local Bakery SEO Audit</h4>
+            <p>Full technical and on-page audit for a local bakery website with a prioritized fix list.</p>
+            <div class="project-metrics">
+              <div><strong>+42%</strong>Organic Traffic (mock)</div>
+              <div><strong>18</strong>Keywords Ranked</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="project-card">
+          <div class="project-media">
+            <span class="project-tag">Social</span>
+            <i class="fa-solid fa-hashtag"></i>
+          </div>
+          <div class="project-body">
+            <h4>Instagram Growth Sprint</h4>
+            <p>30-day content calendar and caption strategy for a fictional skincare brand launch.</p>
+            <div class="project-metrics">
+              <div><strong>94%</strong>Engagement Rate</div>
+              <div><strong>30</strong>Posts Planned</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+        <div class="project-card">
+          <div class="project-media">
+            <span class="project-tag">Paid Ads</span>
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <div class="project-body">
+            <h4>Google Ads Mock Campaign</h4>
+            <p>Keyword-driven search ad campaign structure with ad groups and budget allocation.</p>
+            <div class="project-metrics">
+              <div><strong>3.2x</strong>Projected ROAS</div>
+              <div><strong>4</strong>Ad Groups</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="project-card">
+          <div class="project-media">
+            <span class="project-tag">Content</span>
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <div class="project-body">
+            <h4>Brand Voice Playbook</h4>
+            <p>A tone-of-voice and messaging guide built for a college fest promotional campaign.</p>
+            <div class="project-metrics">
+              <div><strong>12</strong>Content Pillars</div>
+              <div><strong>1</strong>Style Guide</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="project-card">
+          <div class="project-media">
+            <span class="project-tag">Email</span>
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
+          <div class="project-body">
+            <h4>Welcome Series Automation</h4>
+            <p>A 5-email onboarding sequence designed to nurture new sign-ups toward first purchase.</p>
+            <div class="project-metrics">
+              <div><strong>38%</strong>Open Rate (mock)</div>
+              <div><strong>5</strong>Emails</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+        <div class="project-card">
+          <div class="project-media">
+            <span class="project-tag">Analytics</span>
+            <i class="fa-solid fa-chart-simple"></i>
+          </div>
+          <div class="project-body">
+            <h4>Campaign Performance Dashboard</h4>
+            <p>A reporting dashboard tracking reach, engagement, and conversion across channels.</p>
+            <div class="project-metrics">
+              <div><strong>6</strong>Channels Tracked</div>
+              <div><strong>Weekly</strong>Reporting</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Let's work together</h2>
+      <p>Open to internships, entry-level roles, and freelance marketing projects.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-5 reveal reveal-delay-1">
+        <div class="contact-info-item">
+          <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h6>Email</h6>
+            <p>vengadeswari.dm@example.com</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <h6>Phone</h6>
+            <p>+91 90000 00000</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h6>Location</h6>
+            <p>Tamil Nadu, India</p>
+          </div>
+        </div>
+        <div class="social-row mt-4">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal reveal-delay-2">
+        <div class="contact-card">
+          <form id="contactForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control form-control-custom" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control form-control-custom" placeholder="Your Email" required>
+              </div>
+              <div class="col-12">
+                <input type="text" class="form-control form-control-custom" placeholder="Subject">
+              </div>
+              <div class="col-12">
+                <textarea class="form-control form-control-custom" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-solid w-100 w-md-auto">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    &copy; <span id="year"></span> S. Vengadeswari — Built with <span>&hearts;</span> for Digital Marketing.
+  </div>
+</footer>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Navbar scroll state
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Collapse mobile nav on link click
+document.querySelectorAll('#navMenu .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const menu = document.getElementById('navMenu');
+    if (menu.classList.contains('show')) {
+      bootstrap.Collapse.getOrCreateInstance(menu).hide();
+    }
+  });
+});
+
+// Active link on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('#navMenu .nav-link');
+const spy = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`#navMenu .nav-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(s => spy.observe(s));
+
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+// Animated counters
+function animateCounter(el) {
+  const target = parseInt(el.getAttribute('data-count'), 10);
+  const duration = 1400;
+  const start = performance.now();
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target);
+    if (progress < 1) requestAnimationFrame(tick);
+    else el.textContent = target;
+  }
+  requestAnimationFrame(tick);
+}
+const counters = document.querySelectorAll('[data-count]');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(el => counterObserver.observe(el));
+
+// Skill bar fill on view
+const bars = document.querySelectorAll('.skill-bar-fill');
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.getAttribute('data-width') + '%';
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.4 });
+bars.forEach(b => barObserver.observe(b));
+
+// Contact form (front-end only demo)
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  const original = btn.textContent;
+  btn.textContent = 'Message Sent ✓';
+  btn.style.background = '#21e6c1';
+  btn.style.borderColor = '#21e6c1';
+  this.reset();
+  setTimeout(() => {
+    btn.textContent = original;
+    btn.style.background = '';
+    btn.style.borderColor = '';
+  }, 2500);
+});
+</script>
+</body>
+</html>
